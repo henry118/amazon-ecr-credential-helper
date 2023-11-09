@@ -29,6 +29,12 @@ Version:    %s
 Git commit: %s
 `
 
+func init() {
+	credentials.Package = "github.com/awslabs/amazon-ecr-credential-helper"
+	credentials.Version = version.Version
+	credentials.Revision = version.GitCommitSHA
+}
+
 func main() {
 	var versionFlag bool
 	flag.BoolVar(&versionFlag, "v", false, "print version and exit")
